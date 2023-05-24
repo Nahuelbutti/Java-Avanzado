@@ -1,6 +1,18 @@
-*.java linguist-language=Java
 public class Main{
   public static void Main (String[] args ){
+    List<String> ciudades = New arrayList<>();
+    
+    ciudades.add("la plata");
+    ciudades.add("buenos aires");
+    ciudades.add("chivilcoy");
+    ciudades.add("chascomus");
+    ciudades.add("gomez");
+    ciudades.add("ensenada");
+    ciudades.add("beriso");
+    ciudades.add("punta lara");
+    
+    // manera 1 de hacer el recorrido con stream
+    ciudades.stream().forEach(ciudad -> System.out.println(ciudad));
     
   }
 }
