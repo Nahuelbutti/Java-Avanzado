@@ -11,8 +11,15 @@ public class Main{
     ciudades.add("beriso");
     ciudades.add("punta lara");
     
-    // manera 1 de hacer el recorrido con stream
+    // manera 1 de hacer el recorrido con stream, aca con lambda
     ciudades.stream().forEach(ciudad -> System.out.println(ciudad));
     
+    // manera 2 de hacer recorrido con stream, en este caso le pasamos la funcion de abajo y no usamos lambda
+    ciudades.stream().forEach(Main::printCiudad);
+    
+  }
+  
+  public static void printCiudad (String city){
+    System.out.println(city);
   }
 }
