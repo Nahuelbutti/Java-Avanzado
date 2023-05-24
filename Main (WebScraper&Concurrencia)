@@ -1,0 +1,16 @@
+/*
+
+webScraper sirve para poder analizar el contenido de paginas web, basicamente es como un robot que analiza y puede descargar o guardar
+cierto contenido de las paginas web
+
+*/
+
+public class Main {
+
+  public static void main (String[] args){
+    
+  
+  }
+
+
+}
