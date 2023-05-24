@@ -11,6 +11,7 @@ public class Main {
           String link = "https://www.linkedin.com/in/nahuel-butti-058494202/";
           URL url = new URL(link);
      }
+// minuto en el que me quede del video 36:18 / 5:38:14
 
 
 }
