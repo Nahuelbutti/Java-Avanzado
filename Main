@@ -1,3 +1,4 @@
+*.java linguist-language=Java
 public class Main{
   public static void Main (String[] args ){
     
