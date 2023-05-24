@@ -26,9 +26,9 @@ public class Main{
     
     
     // filtrar textos con stream y lambda (en cada . del stream se puede dar enter para ordenar)
-    ciudades.strem().filter(ciudad -> ciudad.startwith("b"))
+    ciudades.strem().filter(ciudad -> ciudad.startwith("b")) // filtramos las ciudades con letra "b" 
       .filter(ciudad -> ciudad.contains("a")) // filtramos las ciudades que contengan la letra "a"
-      .forEach(System.out::println); // filtramos las ciudades con letra "b" 
+      .forEach(System.out::println); 
      
     
   }
