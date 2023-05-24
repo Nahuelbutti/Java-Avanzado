@@ -6,7 +6,7 @@ cierto contenido de las paginas web
 */
 
 public class Main {
-
+     
   public static void main (String[] args){
     String link = "https://www.linkedin.com/in/nahuel-butti-058494202/";
     URL url = new URL(link);
