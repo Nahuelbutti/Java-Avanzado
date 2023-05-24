@@ -18,6 +18,9 @@ public class Main{
     ciudades.stream().forEach(Main::printCiudad); 
     // los :: es pq la funcion que invocamos es static (referencia a metodo se llama, se introdujo en java 8)
     
+    // manera 3 con un forEach y referencia, es decir una combinacion de la manera 1 y 2
+    ciudades.stream().forEach(System.out::println)
+    
   }
   
   public static void printCiudad (String city){
