@@ -15,7 +15,8 @@ public class Main{
     ciudades.stream().forEach(ciudad -> System.out.println(ciudad));
     
     // manera 2 de hacer recorrido con stream, en este caso le pasamos la funcion de abajo y no usamos lambda
-    ciudades.stream().forEach(Main::printCiudad);
+    ciudades.stream().forEach(Main::printCiudad); 
+    // los :: es pq la funcion que invocamos es static (referencia a metodo se llama, se introdujo en java 8)
     
   }
   
