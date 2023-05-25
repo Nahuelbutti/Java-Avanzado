@@ -10,8 +10,14 @@ public class Main {
      public static void main (String[] args){
           String link = "https://www.linkedin.com/in/nahuel-butti-058494202/";
           URL url = new URL(link);
+          HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+          String encoding = conn.getContentEncoding();
+          InputStream input = conn.getInputStream();
+          
+          
      }
-// minuto en el que me quede del video 36:18 / 5:38:14
+
 
 
 }
+// minuto en el que me quede del video 36:18 / 5:38:14
