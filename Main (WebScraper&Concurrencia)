@@ -47,10 +47,18 @@ public class MainWebScraper {
 		
         
 	}
-	// lo que hace el synchronized es que el metodo se ejecute nuevamente una vez haya terminado, porque gracias
-	// a la concurrencia se puede ejecutar de manera desordenada y con el synchronized lo ordenamos
-	// claramente en este caso no tiene sentido pq al hacerlo sincronico se arruina el bajo tiempo de ejecion 
-	// pero sirve en otros casos como guardar en una base de datos
+	/* 
+	 
+	 	Lo que hace el synchronized es que el metodo se ejecute nuevamente una vez haya terminado, porque gracias
+	 a la concurrencia se puede ejecutar de manera desordenada y con el synchronized lo ordenamos.
+	 	Claramente en este caso no tiene sentido pq al hacerlo sincronico se arruina el bajo tiempo de ejecion 
+	 pero sirve en otros casos como guardar en una base de datos. Por ejemplo, en el metodo 
+	 getContenidoWeb (String link) no usamos el synchronized y recorremos de manera concurrente, pero
+	 a la hora de guardar los datos en el servidor lo hacemos de manera synchronized agregandole dicho
+	 termino al metodo de guardar en el servidor.
+	
+	*/
+	
 	private synchronized static String getContenidoWeb (String link){
 		// inicializo resultado antes pq sino en el catch tiene basura
         String resultado = "vacio";
