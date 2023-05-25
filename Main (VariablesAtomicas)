@@ -1,0 +1,18 @@
+// introduccion variables atomicas
+
+package variablesAtomicas;
+
+public class variablesAtomicas {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+		System.out.println("comenzo");
+		Thread.sleep(2000);
+		System.out.println("finalizo");
+		
+	}
+
+}
+
+//aca me quede 1:02:39 / 5:38:14
