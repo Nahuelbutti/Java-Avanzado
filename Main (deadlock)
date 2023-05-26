@@ -2,7 +2,7 @@
 
  3 CONCEPTOS CLAVE en concurrencia
  
- DEADLOCK: cuando dos procesos se quedan esperando que el otro termine y ninguno hace nada, se para el programa
+ DEADLOCK: bloquear recursos para que no lo acceda otro proceso
  
  LIVELOCK: 
  
