@@ -35,7 +35,8 @@ public class Starvation {
 }
 
 class Comida {}
-
+// el elefante esta junto al plato de comida por lo que no tarda en llegar y ademas esta 60 segundos
+// comiendo, por ello la funcion thread.sleep, dormir proceso 
 class Elefante {
     public void comer(Comida comida) {
         synchronized(comida) {
@@ -48,7 +49,10 @@ class Elefante {
         }
     }
 }
-
+// los zorros tienen que moverse hasta el plato de comida por lo que tardan mas en llegar que
+// el elefante que ya esta ahi junto al plato de comida, por lo que como bloquea primero el elefante 
+// los zorros solo pueden comer cuando el elefante termine, si el elefante no dejara de comer 
+// nunca podrian comer los zorros (a este fenomeno se lo denomina starvation)
 class Fox {
     public void comer(Comida comida) {
         mover();
