@@ -1,0 +1,70 @@
+/*
+
+ 3 CONCEPTOS CLAVE en concurrencia
+ 
+ DEADLOCK: cuando dos procesos se quedan esperando que el otro termine y ninguno hace nada, se para el programa
+ 
+ LIVELOCK: 
+ 
+ STARTVATION: 
+
+*/
+
+package deadLockLiveLockStarvation;
+
+import java.util.concurrent.*;
+
+public class deadLock {
+    public static void main(String[] args) {
+// Creacion de participantes y recursos
+        Fox robin = new Fox();
+        Fox miki = new Fox();
+        Comida comida = new Comida();
+        Agua agua = new Agua();
+// Procesamiento de datos
+        ExecutorService service = null;
+        try {
+            service = Executors.newScheduledThreadPool(10);
+            service.submit(() -> robin.comidaYagua(comida,agua));
+            service.submit(() -> miki.aguaYcomida(comida,agua));
+        } finally {
+            if(service != null) service.shutdown();
+        }
+    }
+}
+
+class Comida {}
+
+class Agua {}
+
+class Fox {
+	
+    public void comidaYagua(Comida comida, Agua agua) {
+        synchronized(comida) {
+            System.out.println("Robin: Got deadlock.comida!");
+            mover();
+            synchronized(agua) {
+                System.out.println("Robin: Got deadlock.agua!");
+            }
+        }
+    }
+    
+    public void aguaYcomida(Comida comida, Agua agua) {
+        synchronized(agua) {
+            System.out.println("Miki: Got deadlock.agua!");
+            mover();
+            synchronized(comida) {
+                System.out.println("Miki: Got deadlock.comida!");
+            }
+        }
+    }
+    
+    public void mover() {
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+// Handle exception
+        }
+    }
+    
+}
