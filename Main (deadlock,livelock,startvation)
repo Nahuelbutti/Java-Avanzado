@@ -1,0 +1,11 @@
+/*
+
+ 3 CONCEPTOS CLAVE en concurrencia
+ 
+ DEADLOCK: cuando dos procesos se quedan esperando que el otro termine y ninguno hace nada, se para el programa
+ 
+ LIVELOCK: 
+ 
+ STARTVATION: 
+
+*/
